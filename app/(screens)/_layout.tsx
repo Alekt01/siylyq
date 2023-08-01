@@ -1,6 +1,6 @@
 import { BlurView } from 'expo-blur';
 import { Tabs, usePathname } from 'expo-router';
-import { Book1, Gift } from 'iconsax-react-native';
+import { Book1, FavoriteChart } from 'iconsax-react-native';
 
 import { NavigationBar } from '@/components/tab-bar';
 
@@ -49,12 +49,12 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="billing"
+        name="chat"
         options={{
-          href: '/billing',
-          tabBarLabel: 'Billing',
+          href: '/chat',
+          tabBarLabel: 'Chat',
           tabBarIcon: ({ focused, size }) => (
-            <Gift
+            <FavoriteChart
               size={size}
               color="#5eead4"
               {...(focused && { variant: 'Bold' })}

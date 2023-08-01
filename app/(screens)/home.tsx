@@ -181,7 +181,9 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.containerPink}>
       <View className="px-5 py-6 pb-60">
-        <Text className="mb-5 text-5xl font-semibold text-black">Syulyq</Text>
+        <Text className="mb-10 mt-14 text-5xl font-semibold text-black">
+          Syulyq
+        </Text>
 
         <View className="mb-4 flex w-full flex-row-reverse items-center justify-center rounded-3xl bg-gray-50">
           <TextInput
@@ -230,7 +232,7 @@ const Home = () => {
                             onPress={() => setSearchValue(tag)}
                             // eslint-disable-next-line react/no-array-index-key
                             key={`${tag}-${index}`}
-                            className="rounded-2xl bg-gray-200 p-2"
+                            className="rounded-2xl bg-indigo-200 p-2"
                           >
                             <Text className="text-sm font-bold text-black">
                               {tag}
