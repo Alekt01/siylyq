@@ -1,6 +1,6 @@
 import { BlurView } from 'expo-blur';
 import { Tabs, usePathname } from 'expo-router';
-import {Book1, Gift} from 'iconsax-react-native';
+import { Book1, Gift } from 'iconsax-react-native';
 
 import { NavigationBar } from '@/components/tab-bar';
 
