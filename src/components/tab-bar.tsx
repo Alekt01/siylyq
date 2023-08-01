@@ -1,5 +1,5 @@
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 export function NavigationBar({
   state,

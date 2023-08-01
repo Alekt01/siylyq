@@ -181,25 +181,27 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.containerPink}>
       <View className="px-5 py-6 pb-60">
-        <Text className="mb-5 text-5xl font-semibold text-white">Syulyq</Text>
+        <Text className="mb-10 mt-14 text-5xl font-semibold text-black">
+          Syulyq
+        </Text>
 
-        <View className="mb-10 flex w-full flex-row-reverse rounded-3xl bg-gray-50">
+        <View className="mb-4 flex w-full flex-row-reverse items-center justify-center rounded-3xl bg-gray-50">
           <TextInput
             onChangeText={(searchText) => setSearchValue(searchText)}
             value={searchValue}
-            className="flex w-4/5 rounded-lg px-4 py-2"
+            className="flex rounded-lg px-6 py-4"
             placeholder="Search Personalized Gifts for You"
           />
           <TouchableOpacity
             onPress={() => handleSearch(searchValue)}
-            className="absolute right-0 top-2 z-10 w-1/5 items-center"
+            className="items-center"
           >
-            <SearchNormal size="32" className="text-black" />
+            <SearchNormal size="24" className="text-black" />
           </TouchableOpacity>
         </View>
 
         <ScrollView>
-          <View className="flex flex-col gap-10 bg-gray-50 p-4">
+          <View className="flex flex-col gap-10 p-2">
             {gifts.map((gift) => {
               if (
                 gift.context
@@ -211,7 +213,7 @@ const Home = () => {
               ) {
                 return (
                   <TouchableOpacity
-                    className="relative flex max-w-xs flex-col gap-y-3"
+                    className="relative flex max-w-xs flex-col gap-y-3 rounded-2xl bg-gray-50 p-4"
                     key={`key-${gift.title}`}
                   >
                     <Image
@@ -223,16 +225,18 @@ const Home = () => {
                       {gift.context}
                     </Text>
 
-                    <View className="absolute -top-6 right-0 flex flex-row items-center gap-x-3">
+                    <View className="flex flex-row items-center gap-x-3">
                       {gift.tags.map((tag, index) => {
                         return (
                           <TouchableOpacity
                             onPress={() => setSearchValue(tag)}
                             // eslint-disable-next-line react/no-array-index-key
                             key={`${tag}-${index}`}
-                            className="rounded-2xl bg-pink-500 p-2 text-lg text-white"
+                            className="rounded-2xl bg-indigo-200 p-2"
                           >
-                            <Text className="text-white">{tag}</Text>
+                            <Text className="text-sm font-bold text-black">
+                              {tag}
+                            </Text>
                           </TouchableOpacity>
                         );
                       })}

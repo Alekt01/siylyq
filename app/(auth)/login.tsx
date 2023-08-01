@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   containerPink: {
     flex: 1,
-    backgroundColor: '#8238AE',
+    backgroundColor: 'rgb(241 245 249)',
   },
   image: {
     flex: 1,
