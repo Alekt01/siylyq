@@ -46,14 +46,15 @@ const users = [
     photo: 'https://i.imgur.com/sIPIHcc.png',
   },
 ];
+
 const Taxes = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={styles.containerBlack}>
+    <SafeAreaView style={styles.containerPink}>
       <View className="p-4">
         <Text className="text-4xl font-semibold text-lime-300">Employees</Text>
-        <Text className="text-light text-xl text-white mb-4">
+        <Text className="text-light mb-4 text-xl text-white">
           Manage your employers salary through I-FIRM
         </Text>
       </View>

@@ -18,9 +18,9 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  containerBlack: {
+  containerPink: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#8238AE',
   },
   image: {
     flex: 1,
