@@ -1,15 +1,16 @@
 import { Send } from 'iconsax-react-native';
 import { useState } from 'react';
 import {
+  Image,
   SafeAreaView,
+  ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 
-import { styles } from '../(auth)/login';
+import { styles } from './home';
 
 const Chat = () => {
   const [person, setPerson] = useState('');
@@ -24,7 +25,7 @@ const Chat = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const headers = new Headers({
-    Authorization: `Bearer ${process.env.EXPO_PUBLIC_OPENAI_API_KEY}`,
+    Authorization: `Bearer PLACE_YOUR_OPENAI_API_KEY_HERE`,
     'Content-Type': 'application/json',
   });
 
@@ -78,6 +79,7 @@ const Chat = () => {
 
   const getResponse = () => {
     if (person && celebration && hobbies) {
+      setErrorMessage('');
       fetch('https://api.openai.com/v1/chat/completions', requestOptions)
         .then((response) => response.json())
         .then((data) => {
@@ -92,67 +94,78 @@ const Chat = () => {
   };
 
   return (
-    <SafeAreaView style={styles.containerPink}>
-      <View className="flex justify-evenly px-6 pt-10">
-        <Text className="mb-10 text-xl font-bold text-indigo-700">
-          Use AI to Perfectly Choose a Gift for Your Relatives
-        </Text>
+    <SafeAreaView style={styles.containerColor}>
+      <ScrollView>
+        <Image
+          source={require('../../assets/bg-image.png')}
+          className="h-60 w-full"
+        />
 
-        {errorMessage && (
-          <Text className="text-center text-xl font-bold text-red-600">
-            {errorMessage}
-          </Text>
-        )}
+        <View>
+          <View className="flex justify-evenly px-6 pb-40 pt-10">
+            <Text className="mb-10 text-xl font-bold text-indigo-700">
+              Use AI to Perfectly Choose a Gift for Your Relatives
+            </Text>
 
-        <ScrollView>
-          <View className="mb-8 flex items-end">
-            <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
-              <TextInput
-                onChangeText={(personText) => setPerson(personText)}
-                value={person}
-                className="flex rounded-lg px-6 py-4"
-                placeholder="Search Personalized Gifts for Your "
-              />
+            {errorMessage && (
+              <Text className="text-center text-xl font-bold text-red-600">
+                {errorMessage}
+              </Text>
+            )}
+
+            <View className="mb-8 flex items-end">
+              <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
+                <TextInput
+                  onChangeText={(personText) => setPerson(personText)}
+                  value={person}
+                  className="flex rounded-lg px-6 py-4"
+                  placeholder="Search Personalized Gifts for Your "
+                />
+              </View>
+
+              <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
+                <TextInput
+                  onChangeText={(celebrationText) =>
+                    setCelebration(celebrationText)
+                  }
+                  value={celebration}
+                  className="flex rounded-lg px-6 py-4"
+                  placeholder="What is your event?"
+                />
+              </View>
+
+              <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
+                <TextInput
+                  onChangeText={(hobbiesText) => setHobbies(hobbiesText)}
+                  value={hobbies}
+                  className="flex rounded-lg px-6 py-4"
+                  placeholder="What Hobbies has your Person?"
+                />
+              </View>
+
+              <TouchableOpacity
+                onPress={getResponse}
+                className="flex max-w-[250px] rounded-full bg-indigo-500 p-5"
+              >
+                <Send size="24" className="text-white" />
+              </TouchableOpacity>
             </View>
 
-            <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
-              <TextInput
-                onChangeText={(celebrationText) =>
-                  setCelebration(celebrationText)
-                }
-                value={celebration}
-                className="flex rounded-lg px-6 py-4"
-                placeholder="What is your event?"
-              />
-            </View>
-
-            <View className="mb-4 flex w-full flex-row items-center justify-between rounded-3xl border-[0.5px] border-gray-400 bg-gray-50 pr-5">
-              <TextInput
-                onChangeText={(hobbiesText) => setHobbies(hobbiesText)}
-                value={hobbies}
-                className="flex rounded-lg px-6 py-4"
-                placeholder="What Hobbies has your Person?"
-              />
-            </View>
-
-            <TouchableOpacity
-              onPress={getResponse}
-              className="flex max-w-[250px] rounded-full bg-indigo-500 p-5"
+            <View
+              className={`flex max-w-xs flex-col items-center justify-center self-center rounded-2xl border-[1px] border-indigo-400 bg-gray-50 p-5 transition-opacity ${
+                chatResponse.title ? 'opacity-100' : 'opacity-0'
+              }`}
             >
-              <Send size="24" className="text-white" />
-            </TouchableOpacity>
+              <Text className="mb-4 text-lg font-bold text-gray-950">
+                {chatResponse.title}
+              </Text>
+              <Text className="truncate text-sm text-gray-950">
+                {chatResponse.detailedInformation}
+              </Text>
+            </View>
           </View>
-
-          <View className="flex max-w-xs flex-col items-center justify-center self-center rounded-2xl border-[1px] border-indigo-400 bg-gray-50 p-5">
-            <Text className="mb-4 text-lg font-bold text-gray-950">
-              {chatResponse.title}
-            </Text>
-            <Text className="truncate text-sm text-gray-950">
-              {chatResponse.detailedInformation}
-            </Text>
-          </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
