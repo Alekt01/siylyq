@@ -6,10 +6,10 @@
 ![screenshot-4](https://github.com/ZhQriks/siylyq/assets/113823028/e0affb85-ba69-4cb1-bbb3-5c8db7dde3f7)
 ![screenshot-4 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/f8d25ac3-32d5-49e7-8d7c-12e962943a80)
 
-## Introduction
-Welcome to the Competitive Programming Learning Platform! This mobile application is designed to assist learners in their journey into competitive programming. Built with React Native, the app offers an intuitive user experience and brings the world of algorithms, data structures, and coding competitions right to your fingertips.
-
 ## 🔥 Features
+  - Main Page: Search AI-generated gifts by keywords and tags.
+  - Chat Page: Create personalized gifts for your loved ones on special occasions and events, tailored to their unique hobbies and interests. 
+  
   1. Search Gifts
   2. Search by Clickable Tags
   3. Write the Person's Information
@@ -38,7 +38,3 @@ Welcome to the Competitive Programming Learning Platform! This mobile applicatio
   3. Insert Your **OPENAI_API_KEY** inside ```chat.tsx``` file
   4. IOS: Scan QR Code:
       - On Android: Download the Expo Go app and scan QR Code.
-
-### Architecture
-  Main Page: Search AI-generated gifts by keywords and tags.
-  Chat Page: Create personalized gifts for your loved ones on special occasions and events, tailored to their unique hobbies and interests. 
