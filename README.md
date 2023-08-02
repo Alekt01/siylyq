@@ -1,8 +1,9 @@
 # Screenshots
-
+[screenshot-1](https://github.com/ZhQriks/siylyq/assets/113823028/c52d9ce7-f683-43eb-8186-54cd94c94f2e)
 
 # 🔥 Features
-  1. Search Gifts
+  1. Search Gifts!
+
   2. Search by Clickable Tags
   3. Write Person's Information
   4. Create Personalized Gift using AI 
