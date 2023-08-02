@@ -1,10 +1,5 @@
 # Siylyq - Find a UNIQUE Gift for Your Close Friends in 1 Minute
 
-![screenshot-1](https://github.com/ZhQriks/siylyq/assets/113823028/fe6fb84d-4073-4985-a7de-f17154a7ed2a)
-![screenshot-2 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/0119e58c-3089-4b9e-8af6-476cf209112d)
-![screenshot-3](https://github.com/ZhQriks/siylyq/assets/113823028/fc89ff23-bec3-462b-ab14-a5f3ca919178)
-![screenshot-4](https://github.com/ZhQriks/siylyq/assets/113823028/e0affb85-ba69-4cb1-bbb3-5c8db7dde3f7)
-![screenshot-4 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/f8d25ac3-32d5-49e7-8d7c-12e962943a80)
 
 ## 🔥 Features
   - Main Page: Search AI-generated gifts by keywords and tags.
@@ -15,6 +10,12 @@
   3. Write the Person's Information
   4. Create Personalized Gifts using AI 
   5. Get the Title and Description of the Gift
+
+![screenshot-1](https://github.com/ZhQriks/siylyq/assets/113823028/fe6fb84d-4073-4985-a7de-f17154a7ed2a)
+![screenshot-2 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/0119e58c-3089-4b9e-8af6-476cf209112d)
+![screenshot-3](https://github.com/ZhQriks/siylyq/assets/113823028/fc89ff23-bec3-462b-ab14-a5f3ca919178)
+![screenshot-4](https://github.com/ZhQriks/siylyq/assets/113823028/e0affb85-ba69-4cb1-bbb3-5c8db7dde3f7)
+![screenshot-4 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/f8d25ac3-32d5-49e7-8d7c-12e962943a80)
 
 ## Technologies:
 - ⚡️ Expo for mobile development
