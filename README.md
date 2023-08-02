@@ -1,10 +1,11 @@
 # Screenshots
-[screenshot-1](https://github.com/ZhQriks/siylyq/assets/113823028/c52d9ce7-f683-43eb-8186-54cd94c94f2e)
 
 # 🔥 Features
   1. Search Gifts!
+file:///home/tsonga/Downloads/screenshot-1.png
+[screenshot-2 (1)](https://github.com/ZhQriks/siylyq/assets/113823028/7261f261-e0a0-4895-80d5-7a0871f8b2fa)
+  2. Search by Clickable Tags!
 
-  2. Search by Clickable Tags
   3. Write Person's Information
   4. Create Personalized Gift using AI 
   5. Get Title and Description of the Gift 
